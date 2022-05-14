@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Eliterate Emacs</title>
+<meta name="author" content="The Eternal Yak Shave"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="/home/kevin/.emacs.d/.local/straight/build-28.1.50/revealjs/dist/reveal.css"/>
+
+<link rel="stylesheet" href="/home/kevin/.emacs.d/.local/straight/build-28.1.50/revealjs/dist/theme/moon.css" id="theme"/>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1 class="title">Eliterate Emacs</h1><h2 class="author">The Eternal Yak Shave</h2>
+</section>
+
+<section>
+<section id="slide-orge1a1dda">
+<h2 id="orge1a1dda">Who am I?</h2>
+<ul>
+<li class="fragment appear">Kevin, 32, U.S.A.</li>
+<li class="fragment appear">CAD drafter</li>
+<li class="fragment appear">Local government</li>
+<li class="fragment appear">Computers are neat</li>
+<li class="fragment appear">Doom Emacs</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org9e474cd">
+<h2 id="org9e474cd">What am I talking about?</h2>
+<ul>
+<li class="fragment appear">Non-programmer perspective</li>
+<li class="fragment appear">Provide insight
+<ul>
+<li>Emacs as a playground</li>
+
+</ul></li>
+<li class="fragment appear">But can it run doom?</li>
+<li class="fragment appear"><p>
+Anyone can do it
+</p>
+<aside class="notes">
+<p>
+I&rsquo;m not a programmer.
+</p>
+
+<p>
+I&rsquo;m a professional CAD drafter specializing in civil engineering, most
+specifically in stormwater infrastructure, river and floodplain management, and
+ecological restoration.
+</p>
+
+<p>
+I&rsquo;m the kind of software user who chases shiny novel things, that doesn&rsquo;t take
+the time to understand what their doing before they start doing it, and will
+tinker with my tools until they break.
+</p>
+
+<p>
+It might be difficult for the power users of doom to put themselves in the mind
+of someone who doesn&rsquo;t have a good understanding of programming in general, let
+alone elisp, and what that means in terms of providing those people support.
+Being able to anticipate the problems the novice user might face can help you
+setup systems to help them without requiring you to answer the same questions in
+chat every single day. What kind of issues might arise if core contributors
+start to resent new users?
+</p>
+
+<p>
+I&rsquo;ve installed and used doom emacs on more systems then I can easily remember.
+</p>
+
+<p>
+Windows 10 Enterprise, WSL1 and WSL2
+Windows 10 Personal, WSL1 and WSL2 (triple boot)
+Windows 11 WSL2 with WSLg (triple boot)
+WSL distros
+Fedora, Ubuntu, OpenSUSE
+Ubuntu VPS
+Ubuntu desktop (triple boot)
+Manjaro (triple boot)
+EndeavorOS
+Arch
+Termux
+Windows Subsystem for Android
+</p>
+
+<p>
+Finally, I hope that anyone who is interested in trying doom emacs takes the
+leap. I&rsquo;ve managed to bungle my way into using doom emacs by being curious,
+breaking things countless times, and by lurking around the community of it&rsquo;s
+regular users.
+</p>
+
+</aside></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org41e5032">
+<h2 id="org41e5032">When did I Emacs?</h2>
+<blockquote>
+<p>
+It all started on the crisp winter morning of December 17th, 1992. Father was
+off in the war and mother was lost in a haze of laudanum. I was a quiet child…
+</p>
+</blockquote>
+
+</section>
+<section id="slide-org89e9f79">
+<h3 id="org89e9f79">The True Story</h3>
+<ul>
+<li class="fragment appear">I think it was about 2-3 years ago</li>
+<li class="fragment appear">I liked linux</li>
+<li class="fragment appear">Never used it as a daily driver</li>
+<li class="fragment appear">First tried it over a decade ago</li>
+<li class="fragment appear">Always used nano or notepad++</li>
+<li class="fragment appear">First used Spacemacs</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+I&rsquo;ve known that <code>Emacs</code> existed for many years but never felt tempted to try it.
+</p>
+
+<p>
+I saw a video of someone using their terminal and their terminal prompt used
+powerline separators. I thought that was super cool and that rabbit hole
+eventually led me to Spacemacs. It was interesting but I considered it a novelty
+and gave it up after a couple months.
+</p>
+
+<p>
+Then I stumbled over a series of <code>Youtube</code> videos about <code>Doom Emacs</code> about 3 years
+ago. That would be <a href="https://www.youtube.com/c/ZaisteProgramming/featured">Zaiste Programming</a> and his <code>Doomcast</code> series. There are 27
+videos to date ranging from about 3 minutes to 10 minutes per video.
+</p>
+
+<p>
+This was an excellent gateway to learning more about <code>Doom Emacs</code> and once I saw
+the possibilities I was enamored.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org47d2444">
+<h2 id="org47d2444">Why do I Emacs?</h2>
+<div class="outline-text-2" id="text-org47d2444">
+</div>
+</section>
+<section id="slide-org58438bd">
+<h3 id="org58438bd">Notes</h3>
+<ul>
+<li class="fragment appear">Work from home</li>
+<li class="fragment appear">D&amp;D</li>
+<li class="fragment appear">Journaling</li>
+
+</ul>
+<aside class="notes">
+<p>
+At this point I mainly use <code>Emacs</code> for it&rsquo;s <code>org-mode</code> and I use <code>org-mode</code> for taking
+notes, journaling, and task management. I have many meetings and phone calls
+that are all virtual and I&rsquo;m terrible at paying attention or retaining
+information under those circumstances.
+</p>
+
+<p>
+So I use <code>org-mode</code> to take frequent and copious notes. For every phone call and
+meeting I will take notes and often create a loose list of tasks that I&rsquo;ll
+refine after the meeting and possibly integrate into my larger task list if I&rsquo;m
+feeling organized.
+</p>
+
+<p>
+I also use it to keep track of my D&amp;D campaigns both as a player and a DM.
+</p>
+
+<p>
+The only thing I&rsquo;ve used org-roam for is creating a daily journal entry.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org21cad23">
+<h3 id="org21cad23">Task management</h3>
+<ul>
+<li class="fragment appear">Work</li>
+<li class="fragment appear">Personal projects</li>
+
+</ul>
+<aside class="notes">
+<p>
+I use a single org file that I use to track my professional projects. Each
+project has a headline broken tracking action items and basic information. I
+usually link to an external document that I use for notes on the relevant
+project.
+</p>
+
+<p>
+I do something similar for personal project management.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org5a2a0a2">
+<h3 id="org5a2a0a2">System configuration management</h3>
+<ul>
+<li class="fragment appear">magit</li>
+<li class="fragment appear">text editor</li>
+
+</ul>
+<aside class="notes">
+<p>
+I also use emacs to edit my dotfiles and other system configuration files. I
+only started using magit last year and now I can&rsquo;t imagine not using it.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org42255f7">
+<h3 id="org42255f7">Programming</h3>
+<ul>
+<li class="fragment appear">bash scripting</li>
+<li class="fragment appear">python scripting</li>
+<li class="fragment appear">discord.js</li>
+
+</ul>
+<aside class="notes">
+<p>
+I use emacs for programming but I do little of that in general. I do some bash
+scripting, a little bit of python, and I&rsquo;ve bodged together some discord bots
+with javascript.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org655375c">
+<h3 id="org655375c">Experiments</h3>
+<ul>
+<li class="fragment appear">elfeed</li>
+<li class="fragment appear">mu4e</li>
+<li class="fragment appear">hugo blogging</li>
+<li class="fragment appear"><p>
+literate config
+</p>
+<aside class="notes">
+<p>
+I&rsquo;ve experimented with using doom as my tool for email, RSS feeds, and other
+odds and ends but so far it hasn&rsquo;t become part of my normal routine.
+</p>
+
+</aside></li>
+
+</ul>
+
+</section>
+<section id="slide-orgef6abf6">
+<h3 id="orgef6abf6">I use emacs to use the emacs</h3>
+<ul>
+<li class="fragment appear">yak shaving is the means and end</li>
+<li class="fragment appear"><p>
+playground
+</p>
+<aside class="notes">
+<p>
+I use doom emacs so I can get better at using doom emacs. For the last 2 years
+one of my main hobbies has been configuring emacs. I used to see emacs not as a
+tool but a toy. Any practical use that I squeezed out of it was a bonus. It&rsquo;s
+less of a toy and more of a tool for me now.
+</p>
+
+</aside></li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org76992ee">
+<h2 id="org76992ee">Where do I Emacs?</h2>
+<div class="outline-text-2" id="text-org76992ee">
+</div>
+</section>
+<section id="slide-org3e63402">
+<h3 id="org3e63402">WSL</h3>
+<ul>
+<li class="fragment appear">WSL1 &amp; WSL2</li>
+<li class="fragment appear">Windows 10 and 11</li>
+<li class="fragment appear"><p>
+WSLg
+</p>
+<aside class="notes">
+<p>
+I use <code>Emacs</code> on several different systems so my workflow varies.
+</p>
+
+<p>
+For my job I have a desktop PC with an Enterprise version of <code>Windows 10</code> that is
+on the Government update ring. For a long time I used <code>Emacs</code> within <code>WSL1</code> and
+display it on an X Server within <code>Windows 10</code>. Now I&rsquo;m able to use WSL2 which has
+been an improvement.
+</p>
+
+<p>
+Under <code>Windows 11</code> I&rsquo;m using <code>WSL2</code> with <code>WSLg</code> which allows for displaying a linux
+GUI on <code>Windows</code> without an X Server. Under the hood it&rsquo;s a mix of whatever <code>WSL2</code>
+is, a different linux VM using <code>Wayland</code>, and <code>RDP</code>. But I&rsquo;m still using <code>Emacs 28</code>
+with native-comp and native <code>GTK</code> even though the latter might be useless.
+</p>
+
+</aside></li>
+
+</ul>
+
+</section>
+<section id="slide-orga3ac17a">
+<h3 id="orga3ac17a">Ubuntu</h3>
+<ul>
+<li class="fragment appear">VPS</li>
+<li class="fragment appear"><p>
+Dual boot
+</p>
+<aside class="notes">
+<p>
+I have VPS with <code>Ubuntu</code> on it that I used to remote into extensively and accessed
+Emacs via X-Forwarding. For almost a year this was my main linux and emacs
+environment.
+</p>
+
+<p>
+At one point I was on my personal desktop that had Windows 10 using RDP to
+remote into my work desktop, then using WSL within that to ssh -X into my VPS. I
+used doom emacs via that convoluted system and by comparison having native emacs
+on a linux machine is wonderful.
+</p>
+
+<p>
+Eventually I dual booted my PC with Ubuntu and Windows. Ubuntu never quite
+became my daily driver but I used it and inevitably doom emacs frequently.
+</p>
+
+</aside></li>
+
+</ul>
+
+</section>
+<section id="slide-org6ed8c9c">
+<h3 id="org6ed8c9c">Manjaro</h3>
+<ul>
+<li class="fragment appear">Daily driver</li>
+<li class="fragment appear">Sway and Wayland</li>
+<li class="fragment appear">Lived in emacs</li>
+<li class="fragment appear"><p>
+Literate config
+</p>
+<aside class="notes">
+<p>
+Up until about 3 weeks ago I triple booted my PC with <code>Manjaro</code> linux and <code>Windows
+11</code>. <code>Manjaro</code> was my first linux daily driver. I had the sway window manager and
+went Wayland native. Under <code>Manjaro</code> I&rsquo;m using a mostly Wayland environment and
+have <code>Emacs 28</code> with native-comp and native <code>GTK</code>.
+</p>
+
+</aside></li>
+
+</ul>
+
+</section>
+<section id="slide-org07f65b1">
+<h3 id="org07f65b1">Arch</h3>
+<ul>
+<li class="fragment appear">Thinkpad Yoga 260</li>
+<li class="fragment appear">Emacs is always open</li>
+<li class="fragment appear"><p>
+Use it everyday
+</p>
+<aside class="notes">
+<p>
+I&rsquo;ve used doom emacs to help me manage and configure this little laptop from the
+moment I got it.
+</p>
+
+</aside></li>
+
+</ul>
+
+</section>
+<section id="slide-org7a26377">
+<h3 id="org7a26377">FIN</h3>
+</section>
+</section>
+</div>
+</div>
+<script src="/home/kevin/.emacs.d/.local/straight/build-28.1.50/revealjs/dist/reveal.js"></script>
+<script src="/home/kevin/.emacs.d/.local/straight/build-28.1.50/revealjs/plugin/markdown/markdown.js"></script>
+<script src="/home/kevin/.emacs.d/.local/straight/build-28.1.50/revealjs/plugin/notes/notes.js"></script>
+<script src="/home/kevin/.emacs.d/.local/straight/build-28.1.50/revealjs/plugin/search/search.js"></script>
+<script src="/home/kevin/.emacs.d/.local/straight/build-28.1.50/revealjs/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'slide',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>
